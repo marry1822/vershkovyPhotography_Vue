@@ -21,6 +21,9 @@ export default {
   }),
   components: {
     PhotoItem
+  },
+  computed:{
+    
   }
 };
 </script>
