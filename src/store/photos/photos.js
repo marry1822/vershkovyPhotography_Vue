@@ -47,23 +47,5 @@ const photos = [
   }
 ];
 
-// const photoStore = {
-//   namespaced: true,
-//   state: {
-//     photos: photos,
-//     photosPerPage: 12,
-//     currentPage: 1
-//   },
-//   getters: {
-//     slicedPhotos: ({ photos }) => (from, to) => photos.slice(from, to)
-//   },
-//   actions: {
-//     paginatedPhotos() {
-//       const from = currentPage * photosPerPage - photosPerPage;
-//       const to = currentPage * photosPerPage;
-//       const photosToDisplay = slicedPhotos(from, to);
-//     }
-//   }
-// };
 
 export default photos;
