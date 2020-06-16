@@ -1,12 +1,23 @@
 <template>
-  <div class="standard-section">
+  <div class="standard-section" id="catalog">
     <h2 class="photo-title title">Catalog</h2>
     <div class="photo-container">
       <BRow>
-        <BCol cols="4" v-for="(photo, index) in photos" :key="index">
+        <BCol cols="4" v-for="(photo, index) in paginatedData" :key="index">
           <PhotoItem :photos="photo" />
         </BCol>
       </BRow>
+    </div>
+    <div class="catalog-pagination d-flex justify-content-center">
+      <BPagination
+        v-model="currentPage"
+        :per-page="perPage"
+        :total-rows="total"
+        pills
+        size="sm"
+        prev-text="Prev"
+        next-text="Next"
+      />
     </div>
   </div>
 </template>
@@ -17,13 +28,23 @@ import PhotoItem from "@/components/PhotoItem";
 export default {
   name: "PhotoSection",
   data: () => ({
-    photos
+    photos,
+    currentPage: 1,
+    perPage: 12
   }),
   components: {
     PhotoItem
   },
-  computed:{
-    
+  computed: {
+    paginatedData() {
+      const from = this.currentPage * this.perPage - this.perPage;
+      const to = this.currentPage * this.perPage;
+      return this.photos.slice(from, to);
+    },
+    total() {
+      console.log(this.photos.length);
+      return this.photos.length;
+    }
   }
 };
 </script>

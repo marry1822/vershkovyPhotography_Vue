@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="footer-container d-flex align-center justify-center">
       <BNav class="footer-nav">
         <a v-for="(icon, index) in icons" :key="index" href="#"

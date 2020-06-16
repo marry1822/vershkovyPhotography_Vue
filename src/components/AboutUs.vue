@@ -1,5 +1,5 @@
 <template>
-  <div class="info-section">
+  <div class="info-section"  id="about_us">
     <h2 class="about-us-title title">About Us</h2>
     <div class="info-container d-flex align-center justify-between">
       <p class="about-us">

@@ -5,9 +5,9 @@
         >Vershkovy<span class="logo-span">photography</span></a
       >
       <BNav class="main-header-nav">
-        <a href="#">About us</a>
-        <a href="#">Catalog</a>
-        <a href="#">Contacts</a>
+        <a href="#about_us">About us</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#contacts">Contacts</a>
         <!-- <router-link :to="{ name: 'about-us' }">
           <a href="#">About us</a>
         </router-link>
