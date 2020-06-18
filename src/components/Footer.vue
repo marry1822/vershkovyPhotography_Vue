@@ -2,8 +2,8 @@
   <footer class="footer" id="contacts">
     <div class="footer-container d-flex align-center justify-center">
       <BNav class="footer-nav">
-        <a v-for="(icon, index) in icons" :key="index" href="#"
-          ><img :src="icon"
+        <a v-for="(icon, index) in icons" :key="index" :href="icon.href"
+          ><img :src="icon.image"
         /></a>
       </BNav>
       <span>© 2020 Vershkovy </span>
@@ -54,6 +54,7 @@ export default {
 
 .footer-nav a {
   margin: 10px;
+  cursor: pointer;
 }
 
 .footer-nav img:hover {
