@@ -59,9 +59,10 @@ export default {
 }
 
 .logo {
-  font-size: 50px;
+  /* font-size: 50px; */
   color: rgba(0, 0, 0, 0.8);
   letter-spacing: 7px;
+  font: 400 50px/1 "Quicksand", sans-serif;
 }
 .logo span {
   font: 400 20px/1 "Quicksand", sans-serif;

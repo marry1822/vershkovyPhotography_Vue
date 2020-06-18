@@ -19,8 +19,8 @@ export default {
 
 <style>
 #app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
-  font: 400 18px/1 "Barlow Condensed", sans-serif;
+  font-family: Barlow Condensed, Quicksand, sans-serif;
+  /* font: 400 18px/1 "Barlow Condensed", sans-serif; */
   color: black;
   box-sizing: border-box;
   margin: 0;
