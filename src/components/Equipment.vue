@@ -5,8 +5,9 @@
       <a
         v-for="(item, index) in equipment"
         :key="index"
-        href="https://www.sony.ru/electronics/cyber-shot-compact-cameras/dsc-rx100m5a"
-        ><img :src="item" class="equipment" width="200px"
+        :href="item.href"
+        target="_blank"
+        ><img :src="item.image" class="equipment" width="200px"
       /></a>
     </div>
   </div>
