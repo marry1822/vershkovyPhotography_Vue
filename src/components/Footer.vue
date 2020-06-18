@@ -6,7 +6,7 @@
           ><img :src="icon"
         /></a>
       </BNav>
-      <span>© 2020 Vershkovy</span>
+      <span>© 2020 Vershkovy </span>
     </div>
   </footer>
 </template>

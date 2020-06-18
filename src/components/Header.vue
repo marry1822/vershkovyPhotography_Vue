@@ -7,31 +7,30 @@
       <BNav class="main-header-nav">
         <a href="#about_us">About us</a>
         <a href="#catalog">Catalog</a>
-        <a href="#contacts">Contacts</a>
-        <!-- <router-link :to="{ name: 'about-us' }">
-          <a href="#">About us</a>
+        <a href="#contacts">Contact us</a>
+        <router-link
+          :to="{ name: 'favourites', params: { favData: FAVOURITES } }"
+        >
+          <a class="favourites" href="favourite"
+            >Favourites: {{ FAVOURITES.length }}</a
+          >
         </router-link>
-        <router-link :to="{ name: 'catalog' }">
-          <a href="#">Catalog</a>
-        </router-link>
-        <router-link :to="{ name: 'equipment' }">
-          <a href="#">Equipment</a>
-        </router-link> -->
       </BNav>
     </BContainer>
   </header>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
-  name: "Header"
+  name: "Header",
+  computed: {
+    ...mapGetters(["FAVOURITES"])
+  }
 };
 </script>
 
 <style scoped>
-/* .d-flex {
-  display: flex;
-} */
 .header {
   background-color: #fff;
   padding: 0;
@@ -81,6 +80,10 @@ export default {
 
 .main-header-nav a + a {
   padding-left: 20px;
+}
+
+.main-header-nav .favourites {
+  font-weight: bold;
 }
 
 .container a:hover {

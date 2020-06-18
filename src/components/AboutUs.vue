@@ -1,5 +1,5 @@
 <template>
-  <div class="info-section"  id="about_us">
+  <div class="info-section" id="about_us">
     <h2 class="about-us-title title">About Us</h2>
     <div class="info-container d-flex align-center justify-between">
       <p class="about-us">
@@ -29,7 +29,7 @@ export default {
 .info-section {
   background-color: rgba(0, 0, 0, 0.2);
   margin: auto;
-  padding-top: 30px 30px;
+  margin-top: 150px;
 }
 
 .info-container {
@@ -59,7 +59,7 @@ export default {
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
-  padding: 30px 0;
+  padding: 50px 0;
   font-weight: bold;
   opacity: 0.8;
   font: 700 30px/1 "Quicksand", sans-serif;

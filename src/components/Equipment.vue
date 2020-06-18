@@ -27,7 +27,7 @@ export default {
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
-  padding: 30px 0;
+  padding: 50px 0;
   font-weight: bold;
   opacity: 0.8;
   font: 700 30px/1 "Quicksand", sans-serif;
@@ -43,6 +43,7 @@ export default {
 
 .equipment-section {
   margin: auto;
+  margin-top: 150px;
   padding-top: 30px 30px;
 }
 

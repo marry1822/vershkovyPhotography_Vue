@@ -4,7 +4,7 @@
     <div class="photo-container">
       <BRow>
         <BCol cols="4" v-for="(photo, index) in paginatedData" :key="index">
-          <PhotoItem :photos="photo" />
+          <PhotoItem :photos="photo" @addToFavourites="addToFavourites" />
         </BCol>
       </BRow>
     </div>
@@ -25,6 +25,7 @@
 <script>
 import photos from "@/store/photos/photos.js";
 import PhotoItem from "@/components/PhotoItem";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "PhotoSection",
   data: () => ({
@@ -44,6 +45,13 @@ export default {
     total() {
       console.log(this.photos.length);
       return this.photos.length;
+    },
+    ...mapGetters(["FAVOURITES"])
+  },
+  methods: {
+    ...mapActions(["ADD_TO_FAVOURITES"]),
+    addToFavourites(photos) {
+      this.ADD_TO_FAVOURITES(photos);
     }
   }
 };
@@ -65,16 +73,9 @@ export default {
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
-  padding: 30px 0;
+  padding: 50px 0;
   font-weight: bold;
   opacity: 0.8;
   font: 700 30px/1 "Quicksand", sans-serif;
 }
 </style>
-
-// { image: "../assets/one.png" }, // { image: "../assets/2.png" }, // { image:
-"../assets/3.png" }, // { image: "../assets/4.png" }, // { image:
-"../assets/5.png" }, // { image: "../assets/6.png" }, // { image:
-"../assets/7.png" }, // { image: "../assets/8.png" }, // { image:
-"../assets/9.png" }, // { image: "../assets/10.png" }, // { image:
-"../assets/11.png" }, // { image: "../assets/12.png" }

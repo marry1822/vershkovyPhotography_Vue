@@ -17,7 +17,7 @@ export default {
   name: "CatalogPagination",
   data: () => ({
     currentPage: 1,
-    total: 24,
+    total: 60,
     perPage: 12
   })
 };

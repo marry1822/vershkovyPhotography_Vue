@@ -1,11 +1,57 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import photos from "./photos/photos";
+import equipment from "./photos/equipment";
+import icons from "./photos/footerIcons";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
+  state: {
+    catalogPhotos: [],
+    favourites: []
+  },
+  mutations: {
+    TO_FAVOURITES(state, photo) {
+      if (state.favourites.length) {
+        let isExist = false;
+        state.favourites.map(function(item) {
+          if (item.image === photo.image) {
+            isExist = true;
+            alert("This photo has already added to favourites");
+            return;
+          }
+        });
+        if (!isExist) {
+          state.favourites.push(photo);
+        }
+      } else {
+        state.favourites.push(photo);
+      }
+    },
+    REMOVE_FROM_FAV(state, index) {
+      state.favourites.splice(index, 1);
+    }
+  },
+  actions: {
+    ADD_TO_FAVOURITES({ commit }, photo) {
+      commit("TO_FAVOURITES", photo);
+    },
+    REMOVE_FROM_FAVOURITES({ commit }, index) {
+      commit("REMOVE_FROM_FAV", index);
+    }
+  },
+  getters: {
+    CATALOG_PHOTOS(state) {
+      return state.catalogPhotos;
+    },
+    FAVOURITES(state) {
+      return state.favourites;
+    }
+  },
+  modules: {
+    photos,
+    equipment,
+    icons
+  }
 });

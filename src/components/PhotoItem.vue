@@ -7,6 +7,9 @@
       <img :src="photos.image" />
     </b-modal>
     <img :src="photos.image" />
+    <a @click="addToFavourites"
+      ><img class="like" src="@/assets/heart.png" alt="like"
+    /></a>
   </div>
 </template>
 
@@ -20,7 +23,12 @@ export default {
   },
   data: () => ({
     modalShow: false
-  })
+  }),
+  methods: {
+    addToFavourites() {
+      this.$emit("addToFavourites", this.photos);
+    }
+  }
 };
 </script>
 
@@ -56,5 +64,17 @@ export default {
   right: 37%;
   top: 50%;
   visibility: hidden;
+}
+
+.like {
+  position: absolute;
+  left: 2%;
+  top: 90%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.like:hover {
+  opacity: 1;
 }
 </style>
