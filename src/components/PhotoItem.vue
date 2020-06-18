@@ -1,12 +1,13 @@
 <template>
   <div class="photo-item">
-    <button class="open-photo" @click="modalShow = !modalShow">
-      Open
-    </button>
     <b-modal id="modal-1" :title="photos.desc" v-model="modalShow" hide-footer>
       <img :src="photos.image" />
     </b-modal>
-    <img :src="photos.image" />
+    <img
+      :src="photos.image"
+      @click="modalShow = !modalShow"
+      class="open-photo"
+    />
     <a @click="addToFavourites"
       ><img class="like" src="@/assets/heart.png" alt="like"
     /></a>
@@ -55,15 +56,7 @@ export default {
 }
 
 .open-photo {
-  position: absolute;
-  width: 100px;
-  height: 30px;
-  border-radius: 15px;
-  border: none;
-  opacity: 0.5;
-  right: 37%;
-  top: 50%;
-  visibility: hidden;
+  cursor: pointer;
 }
 
 .like {
