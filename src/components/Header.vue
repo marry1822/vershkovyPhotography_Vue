@@ -55,7 +55,7 @@ export default {
   margin: auto;
   border-bottom: 2px solid;
   border-color: rgba(0, 0, 0, 0.8);
-  height: 150px;
+  height: 100px;
 }
 
 .logo {

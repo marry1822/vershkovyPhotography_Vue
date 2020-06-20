@@ -35,13 +35,15 @@ export default {
 }
 
 .footer {
-  background-color: #fff;
-  padding: 0;
+  /* background-color: #fff; */
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-top: 50px;
   position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
   opacity: 0.5;
+  margin-top: 100px;
 }
 
 .footer-container {

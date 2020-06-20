@@ -44,8 +44,8 @@ export default {
 
 .equipment-section {
   margin: auto;
-  margin-top: 150px;
-  padding-top: 30px 30px;
+  margin-top: 100px;
+  padding: 50px 0 0 0;
 }
 
 .equipment-container {

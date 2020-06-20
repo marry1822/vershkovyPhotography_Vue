@@ -60,7 +60,7 @@ export default {
 <style scoped>
 .standard-section {
   padding: 50px 0 0 0;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 .photo-container {

@@ -9,8 +9,14 @@
       class="open-photo"
     />
     <a @click="addToFavourites"
-      ><img class="like" src="@/assets/heart.png" alt="like"
-    /></a>
+      ><img
+        class="like"
+        src="@/assets/heart.png"
+        alt="like"
+        v-on:click="clicked = !clicked"
+        v-bind:class="{ 'like-clicked': clicked }"
+      />
+    </a>
   </div>
 </template>
 
@@ -23,7 +29,8 @@ export default {
     }
   },
   data: () => ({
-    modalShow: false
+    modalShow: false,
+    clicked: false
   }),
   methods: {
     addToFavourites() {
@@ -63,7 +70,15 @@ export default {
   position: absolute;
   left: 2%;
   top: 90%;
-  opacity: 0.5;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.like-clicked {
+  position: absolute;
+  left: 2%;
+  top: 90%;
+  opacity: 1;
   cursor: pointer;
 }
 

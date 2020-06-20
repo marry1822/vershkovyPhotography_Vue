@@ -29,7 +29,8 @@ export default {
 .info-section {
   background-color: rgba(0, 0, 0, 0.2);
   margin: auto;
-  margin-top: 150px;
+  margin-top: 100px;
+  padding: 50px 0 0 0;
 }
 
 .info-container {
