@@ -20,8 +20,7 @@
 
 <script>
 export default {
-  name: "AboutUs",
-  data: () => ({})
+  name: "AboutUs"
 };
 </script>
 

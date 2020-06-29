@@ -36,7 +36,14 @@ export default {
   components: {
     PhotoItem
   },
+  methods: {
+    ...mapActions(["ADD_TO_FAVOURITES"]),
+    addToFavourites(photos) {
+      this.ADD_TO_FAVOURITES(photos);
+    }
+  },
   computed: {
+    ...mapGetters(["FAVOURITES"]),
     paginatedData() {
       const from = this.currentPage * this.perPage - this.perPage;
       const to = this.currentPage * this.perPage;
@@ -45,13 +52,6 @@ export default {
     total() {
       console.log(this.photos.length);
       return this.photos.length;
-    },
-    ...mapGetters(["FAVOURITES"])
-  },
-  methods: {
-    ...mapActions(["ADD_TO_FAVOURITES"]),
-    addToFavourites(photos) {
-      this.ADD_TO_FAVOURITES(photos);
     }
   }
 };

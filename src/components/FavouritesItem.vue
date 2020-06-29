@@ -1,7 +1,7 @@
 <template>
   <div class="fav-item">
     <img class="fav-img" :src="favPhotos.image" />
-    <button class="deleteBtn" @click="deleteFromFav">
+    <button class="delete-btn" @click="deleteFromFav">
       Delete
     </button>
   </div>
@@ -34,7 +34,7 @@ export default {
   display: block;
 }
 
-.deleteBtn {
+.delete-btn {
   position: absolute;
   right: 2%;
   bottom: 2%;
@@ -43,12 +43,6 @@ export default {
   border-radius: 15px;
   border: none;
   opacity: 0.5;
-}
-.like {
-  position: absolute;
-  left: 2%;
-  top: 90%;
-  opacity: 0.4;
-  cursor: pointer;
+  font-size: 12px;
 }
 </style>

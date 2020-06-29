@@ -1,19 +1,12 @@
 <template>
   <div id="app">
-    <keep-alive>
-      <router-view></router-view>
-    </keep-alive>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-
 export default {
-  name: "App",
-  computed: {
-    ...mapGetters(["FAVOURITES"])
-  }
+  name: "App"
 };
 </script>
 

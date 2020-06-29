@@ -8,15 +8,9 @@
       @click="modalShow = !modalShow"
       class="open-photo"
     />
-    <a @click="addToFavourites"
-      ><img
-        class="like"
-        src="@/assets/heart.png"
-        alt="like"
-        v-on:click="clicked = !clicked"
-        v-bind:class="{ 'like-clicked': clicked }"
-      />
-    </a>
+    <b-button class="add-to-favourites" @click="addToFavourites"
+      >Add to favorites</b-button
+    >
   </div>
 </template>
 
@@ -25,12 +19,12 @@ export default {
   name: "PhotoItem",
   props: {
     photos: {
-      type: Array
+      type: Array,
+      default: () => []
     }
   },
   data: () => ({
-    modalShow: false,
-    clicked: false
+    modalShow: false
   }),
   methods: {
     addToFavourites() {
@@ -51,9 +45,10 @@ export default {
   opacity: 0.8;
   background-color: rgba(0, 0, 0, 0.7);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.photo-item:hover .open-photo {
+.photo-item:hover {
   visibility: visible;
   transition: all 0.5s ease;
 }
@@ -62,27 +57,19 @@ export default {
   display: block;
 }
 
-.open-photo {
-  cursor: pointer;
-}
-
-.like {
+.add-to-favourites {
   position: absolute;
-  left: 2%;
-  top: 90%;
-  opacity: 0.4;
-  cursor: pointer;
+  right: 2%;
+  bottom: 2%;
+  font-size: 12px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  opacity: 0.5;
 }
 
-.like-clicked {
-  position: absolute;
-  left: 2%;
-  top: 90%;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.like:hover {
-  opacity: 1;
+.add-to-favourites:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 </style>
