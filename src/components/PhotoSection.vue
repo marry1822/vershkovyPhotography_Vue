@@ -17,6 +17,7 @@
         size="sm"
         prev-text="Prev"
         next-text="Next"
+        @change="onClick"
       />
     </div>
   </div>
@@ -40,6 +41,9 @@ export default {
     ...mapActions(["ADD_TO_FAVOURITES"]),
     addToFavourites(photos) {
       this.ADD_TO_FAVOURITES(photos);
+    },
+    onClick() {
+      window.scrollTo(0, 0);
     }
   },
   computed: {

@@ -1,6 +1,7 @@
 <template>
   <footer class="footer" id="contacts">
     <div class="footer-container d-flex align-center justify-center">
+      <span>Contact us</span>
       <BNav class="footer-nav">
         <a
           v-for="(icon, index) in icons"
@@ -35,9 +36,8 @@ export default {
 }
 
 .footer {
-  /* background-color: #fff; */
   background-color: rgba(0, 0, 0, 0.1);
-  padding-top: 50px;
+  padding-top: auto;
   position: relative;
   bottom: 0;
   left: 0;
@@ -50,12 +50,12 @@ export default {
   max-width: 1170px;
   padding: 0 15px;
   margin: auto;
-  height: 100px;
+  height: 130px;
   flex-direction: column;
 }
 
 .footer-nav {
-  margin-bottom: 20px;
+  margin: 10px;
 }
 
 .footer-nav a {
