@@ -8,7 +8,7 @@
     </router-link>
     <template v-if="isEmpty">
       <BRow>
-        <BCol cols="3" v-for="(item, index) in favData" :key="item">
+        <BCol cols="3" v-for="(item, index) in favData" :key="index">
           <FavouritesItem
             :favPhotos="item"
             @deleteFromFav="deleteFromFav(index)"
@@ -30,7 +30,8 @@ export default {
   },
   props: {
     favData: {
-      type: Array
+      type: Array,
+      default: () => []
     }
   },
   methods: {
